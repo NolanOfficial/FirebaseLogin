@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 var new = 1.2
-var newNew = 1.5
+var newNew = 1.6
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
