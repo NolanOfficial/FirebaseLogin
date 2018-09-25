@@ -13,6 +13,7 @@
 		6A40BF712158F6DB003F6E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF6F2158F6DB003F6E66 /* Main.storyboard */; };
 		6A40BF732158F6DC003F6E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF722158F6DC003F6E66 /* Assets.xcassets */; };
 		6A40BF762158F6DC003F6E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF742158F6DC003F6E66 /* LaunchScreen.storyboard */; };
+		6A62782C2159C64F000146AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A62782B2159C64F000146AC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		6A40BF722158F6DC003F6E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A40BF752158F6DC003F6E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A40BF772158F6DC003F6E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A62782B2159C64F000146AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7B8572BCE64A34B75CD39D8 /* Pods-FirebaseLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.release.xcconfig"; sourceTree = "<group>"; };
 		A905CA54CB7F9FC85AB629A5 /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EF9C94D394EECEE111A747 /* Pods-FirebaseLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				6A40BF6F2158F6DB003F6E66 /* Main.storyboard */,
 				6A40BF722158F6DC003F6E66 /* Assets.xcassets */,
 				6A40BF742158F6DC003F6E66 /* LaunchScreen.storyboard */,
+				6A62782B2159C64F000146AC /* GoogleService-Info.plist */,
 				6A40BF772158F6DC003F6E66 /* Info.plist */,
 			);
 			path = FirebaseLogin;
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A62782C2159C64F000146AC /* GoogleService-Info.plist in Resources */,
 				6A40BF762158F6DC003F6E66 /* LaunchScreen.storyboard in Resources */,
 				6A40BF732158F6DC003F6E66 /* Assets.xcassets in Resources */,
 				6A40BF712158F6DB003F6E66 /* Main.storyboard in Resources */,
