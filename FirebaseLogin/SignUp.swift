@@ -32,7 +32,7 @@ class SignUp: UIViewController {
                 self.accountCreated.isHidden = false
             } else {
                 print("Error Creating Account")
-            print(error!.localizedDescription)
+        print(error!.localizedDescription)
             }
            
         }
