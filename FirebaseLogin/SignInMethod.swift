@@ -15,12 +15,13 @@ import Firebase
 class SingInMethod: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var incorrectEP: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        incorrectEP.isHidden = true
     }
     
     
@@ -29,9 +30,10 @@ class SingInMethod: UIViewController {
         print("Attempting to Log In")
         Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
             if let u = user {
-                self.performSegue(withIdentifier: "goToHome", sender: self)
+            self.performSegue(withIdentifier: "goToHome", sender: self)
                 print("Logged In")
             } else {
+                self.incorrectEP.isHidden = false
                 print("Incorrect Email or Password")
                 print(error!.localizedDescription)
             }

@@ -16,18 +16,25 @@ class SignUp: UIViewController {
     // Username and Password TextFields
     @IBOutlet weak var emailSignUp: UITextField!
     @IBOutlet weak var passwordSignUp: UITextField!
+    @IBOutlet weak var accountCreated: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        accountCreated.isHidden = true
     }
     
     //Signing Up
     @IBAction func createAccount(_ sender: Any) {
         print("Creating Account")
-        Auth.auth().createUser(withEmail: emailSignUp.text!, password: passwordSignUp.text!) { (authResult, error) in
-            print("Account Created")
-            guard let user = authResult?.user else { return }
+        Auth.auth().createUser(withEmail: emailSignUp.text!, password: passwordSignUp.text!) { (user, error) in
+            if let u = user {
+                print("Account Created")
+                self.accountCreated.isHidden = false
+            } else {
+                print("Error Creating Account")
+            print(error!.localizedDescription)
+            }
+           
         }
         
     }
