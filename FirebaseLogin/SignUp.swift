@@ -17,21 +17,33 @@ class SignUp: UIViewController {
     @IBOutlet weak var emailSignUp: UITextField!
     @IBOutlet weak var passwordSignUp: UITextField!
     @IBOutlet weak var accountCreated: UILabel!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         accountCreated.isHidden = true
+        activity.isHidden = true
     }
     
     //Signing Up
     @IBAction func createAccount(_ sender: Any) {
+        activity.isHidden = false
+        activity.startAnimating()
+        accountCreated.isHidden = true
         print("Creating Account")
         Auth.auth().createUser(withEmail: emailSignUp.text!, password: passwordSignUp.text!) { (user, error) in
             if let u = user {
+                self.activity.stopAnimating()
+                self.activity.isHidden = true
                 print("Account Created")
                 self.accountCreated.isHidden = false
             } else {
+                self.activity.stopAnimating()
+                self.activity.isHidden = true
                 print("Error Creating Account")
+                self.accountCreated.isHidden = false
+                self.accountCreated.text = "Error. Please Try Again."
+                self.accountCreated.textColor = .red
         print(error!.localizedDescription)
             }
            
