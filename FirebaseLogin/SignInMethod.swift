@@ -28,8 +28,13 @@ class SingInMethod: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         print("Attempting to Log In")
         Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-        self.performSegue(withIdentifier: "goToHome", sender: self)
-        print("Logged In")
+            if let u = user {
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+                print("Logged In")
+            } else {
+                print("Incorrect Email or Password")
+                print(error!.localizedDescription)
+            }
         }
     }
     
