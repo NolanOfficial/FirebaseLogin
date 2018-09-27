@@ -26,8 +26,10 @@ class SingInMethod: UIViewController {
     
     
     @IBAction func loginButton(_ sender: Any) {
+        print("Attempting to Log In")
         Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-            print("Attempting to Sign In...")
+        self.performSegue(withIdentifier: "goToHome", sender: self)
+        print("Logged In")
         }
     }
     

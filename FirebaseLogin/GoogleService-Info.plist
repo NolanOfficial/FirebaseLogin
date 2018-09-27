@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>713245946830-sor59eu1g158ik91nhnimnkam1sra3re.apps.googleusercontent.com</string>
+	<string>713245946830-k7hfsqgb95mq40fkdh5nblohrfpu76st.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.713245946830-sor59eu1g158ik91nhnimnkam1sra3re</string>
+	<string>com.googleusercontent.apps.713245946830-k7hfsqgb95mq40fkdh5nblohrfpu76st</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD4yo8JZhlXLMCxUbDluF4f963i3QWnU6w</string>
 	<key>GCM_SENDER_ID</key>
@@ -23,17 +23,17 @@
 	<key>STORAGE_BUCKET</key>
 	<string>fir-login-eeb04.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:713245946830:ios:8b4b91a953d6f83e</string>
+	<string>1:713245946830:ios:d23c8a0857b77d41</string>
 	<key>DATABASE_URL</key>
 	<string>https://fir-login-eeb04.firebaseio.com</string>
 </dict>
