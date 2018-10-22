@@ -17,6 +17,7 @@ class SingInMethod: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var incorrectEP: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var littedGif: UIImageView!
     
     
     
@@ -24,6 +25,12 @@ class SingInMethod: UIViewController {
         super.viewDidLoad()
         incorrectEP.isHidden = true
         activity.isHidden = true
+        navigationController?.navigationBar.isHidden = true
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     
@@ -32,6 +39,7 @@ class SingInMethod: UIViewController {
         incorrectEP.isHidden = true
         activity.isHidden = false
         activity.startAnimating()
+        
         print("Attempting to Log In")
         Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
             if let u = user {

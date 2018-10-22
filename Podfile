@@ -8,6 +8,8 @@ target 'FirebaseLogin' do
   # Pods for FirebaseLogin
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'FLAnimatedImage'
+pod 'SwiftyGif'
 
 
 end

@@ -15,6 +15,7 @@
 		6A40BF712158F6DB003F6E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF6F2158F6DB003F6E66 /* Main.storyboard */; };
 		6A40BF732158F6DC003F6E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF722158F6DC003F6E66 /* Assets.xcassets */; };
 		6A40BF762158F6DC003F6E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A40BF742158F6DC003F6E66 /* LaunchScreen.storyboard */; };
+		6A604820216F841200455195 /* lit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6A60481F216F841200455195 /* lit.gif */; };
 		6A62782E2159C78B000146AC /* SignInMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62782D2159C78B000146AC /* SignInMethod.swift */; };
 		6A627830215A1089000146AC /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62782F215A1089000146AC /* SignUp.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		6A40BF722158F6DC003F6E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A40BF752158F6DC003F6E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A40BF772158F6DC003F6E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A60481F216F841200455195 /* lit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lit.gif; sourceTree = "<group>"; };
 		6A62782D2159C78B000146AC /* SignInMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMethod.swift; sourceTree = "<group>"; };
 		6A62782F215A1089000146AC /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		A7B8572BCE64A34B75CD39D8 /* Pods-FirebaseLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				6A62782F215A1089000146AC /* SignUp.swift */,
 				6A62782D2159C78B000146AC /* SignInMethod.swift */,
 				6A40BF722158F6DC003F6E66 /* Assets.xcassets */,
+				6A60481F216F841200455195 /* lit.gif */,
 				6A3D604B215C577500BAC076 /* GoogleService-Info.plist */,
 				6A40BF742158F6DC003F6E66 /* LaunchScreen.storyboard */,
 				6A40BF772158F6DC003F6E66 /* Info.plist */,
@@ -160,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A604820216F841200455195 /* lit.gif in Resources */,
 				6A40BF762158F6DC003F6E66 /* LaunchScreen.storyboard in Resources */,
 				6A3D604C215C577500BAC076 /* GoogleService-Info.plist in Resources */,
 				6A40BF732158F6DC003F6E66 /* Assets.xcassets in Resources */,
@@ -177,14 +181,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

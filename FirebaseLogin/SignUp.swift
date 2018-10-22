@@ -23,6 +23,11 @@ class SignUp: UIViewController {
         super.viewDidLoad()
         accountCreated.isHidden = true
         activity.isHidden = true
+    navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
     
     //Signing Up
@@ -42,7 +47,7 @@ class SignUp: UIViewController {
                 self.activity.isHidden = true
                 print("Error Creating Account")
                 self.accountCreated.isHidden = false
-                self.accountCreated.text = "Error. Please Try Again."
+                self.accountCreated.text = "\(error!.localizedDescription)"
                 self.accountCreated.textColor = .red
         print(error!.localizedDescription)
             }
