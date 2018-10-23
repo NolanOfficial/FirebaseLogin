@@ -19,8 +19,6 @@ class SingInMethod: UIViewController {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var littedGif: UIImageView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         incorrectEP.isHidden = true
@@ -32,8 +30,6 @@ class SingInMethod: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
-    
-    
     
     @IBAction func loginButton(_ sender: Any) {
         incorrectEP.isHidden = true
@@ -57,12 +53,7 @@ class SingInMethod: UIViewController {
         }
     }
     
-    
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
     }
-    
-
-    
-    
     
 }

@@ -16,8 +16,6 @@ class ViewController: UIViewController {
      navigationItem.hidesBackButton = true
        
     }
-
-
 }
 
 

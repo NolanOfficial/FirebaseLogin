@@ -11,24 +11,15 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-
-
-
 class Logout: UIViewController {
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
       
     }
     
-   
-    
     @IBAction func logoutFunction(_ sender: UIButton) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
     }
-    
-  
-    
 }
