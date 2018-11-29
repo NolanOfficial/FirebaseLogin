@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2AC66AA2314C4727C25FC78D /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A905CA54CB7F9FC85AB629A5 /* Pods_FirebaseLogin.framework */; };
+		6A20BF0E21AFD7D400F521CA /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A20BF0D21AFD7D300F521CA /* Background.jpg */; };
 		6A3D604C215C577500BAC076 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3D604B215C577500BAC076 /* GoogleService-Info.plist */; };
 		6A3D604E215C80CC00BAC076 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D604D215C80CC00BAC076 /* Logout.swift */; };
 		6A40BF6C2158F6DB003F6E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A40BF6B2158F6DB003F6E66 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A20BF0D21AFD7D300F521CA /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		6A3D604B215C577500BAC076 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A3D604D215C80CC00BAC076 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		6A40BF682158F6DB003F6E66 /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A20BF0F21AFD7E600F521CA /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				6A20BF0D21AFD7D300F521CA /* Background.jpg */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		6A40BF5F2158F6DB003F6E66 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 				6A3D604B215C577500BAC076 /* GoogleService-Info.plist */,
 				6A40BF742158F6DC003F6E66 /* LaunchScreen.storyboard */,
 				6A40BF772158F6DC003F6E66 /* Info.plist */,
+				6A20BF0F21AFD7E600F521CA /* Photos */,
 			);
 			path = FirebaseLogin;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A20BF0E21AFD7D400F521CA /* Background.jpg in Resources */,
 				6A40BF762158F6DC003F6E66 /* LaunchScreen.storyboard in Resources */,
 				6A3D604C215C577500BAC076 /* GoogleService-Info.plist in Resources */,
 				6A40BF732158F6DC003F6E66 /* Assets.xcassets in Resources */,

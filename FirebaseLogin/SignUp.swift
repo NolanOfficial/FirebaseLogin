@@ -18,6 +18,7 @@ class SignUp: UIViewController {
     @IBOutlet weak var passwordSignUp: UITextField!
     @IBOutlet weak var accountCreated: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,14 @@ class SignUp: UIViewController {
         activity.isHidden = true
         navigationController?.navigationBar.isHidden = false
     }
+
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+     navigationController?.navigationBar.isHidden = false
+    navigationController?.navigationBar.alpha = 0.5
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-         navigationController?.navigationBar.isHidden = false
-    }
-    
+}
+
     
     override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -63,6 +66,9 @@ class SignUp: UIViewController {
         
     }
     
+    @IBAction func dimissButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     // Closes keyboard after editing
     func textFieldShouldReturn() {

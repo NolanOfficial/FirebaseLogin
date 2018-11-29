@@ -15,7 +15,6 @@ class Logout: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
     }
     
     @IBAction func logoutFunction(_ sender: UIButton) {

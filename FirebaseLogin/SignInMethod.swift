@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 
 class SingInMethod: UIViewController {
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var incorrectEP: UILabel!
