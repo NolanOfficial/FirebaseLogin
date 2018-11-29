@@ -10,35 +10,38 @@ import Foundation
 import UIKit
 import Firebase
 
-
-
 class SingInMethod: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var incorrectEP: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    @IBOutlet weak var littedGif: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        incorrectEP.isHidden = true
-        activity.isHidden = true
-        navigationController?.navigationBar.isHidden = true
-        
+        setupForLogin()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailText.text = nil
+        passwordText.text = nil
+        setupForLogin()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        super.viewDidAppear(animated)
     }
     
+    // Login Function
     @IBAction func loginButton(_ sender: Any) {
         incorrectEP.isHidden = true
         activity.isHidden = false
         activity.startAnimating()
+        textFieldShouldReturn()
         
         print("Attempting to Log In")
         Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-            if let u = user {
+            if user != nil {
             self.performSegue(withIdentifier: "goToHome", sender: self)
                 print("Logged In")
                 self.activity.stopAnimating()
@@ -53,7 +56,26 @@ class SingInMethod: UIViewController {
         }
     }
     
+    // Go back to Home Screen
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
     }
     
+    // Closes keyboard after editing
+    func textFieldShouldReturn() {
+        self.view.endEditing(true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    // Prepares screen for Login
+    func setupForLogin() {
+        incorrectEP.isHidden = true
+        activity.isHidden = true
+        activity.startAnimating()
+        navigationController?.navigationBar.isHidden = true
+    }    
 }

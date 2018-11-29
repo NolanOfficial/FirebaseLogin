@@ -23,21 +23,28 @@ class SignUp: UIViewController {
         super.viewDidLoad()
         accountCreated.isHidden = true
         activity.isHidden = true
-    navigationController?.navigationBar.isHidden = false
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
     
-    //Signing Up
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         navigationController?.navigationBar.isHidden = false
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    }
+    
+    // Signing Up Function 
     @IBAction func createAccount(_ sender: Any) {
+        textFieldShouldReturn()
         activity.isHidden = false
         activity.startAnimating()
         accountCreated.isHidden = true
         print("Creating Account")
         Auth.auth().createUser(withEmail: emailSignUp.text!, password: passwordSignUp.text!) { (user, error) in
-            if let u = user {
+            if user != nil {
                 self.activity.stopAnimating()
                 self.activity.isHidden = true
                 print("Account Created")
@@ -47,7 +54,7 @@ class SignUp: UIViewController {
                 self.activity.isHidden = true
                 print("Error Creating Account")
                 self.accountCreated.isHidden = false
-                self.accountCreated.text = "\(error!.localizedDescription)"
+                self.accountCreated.text = "Error. Please try again."
                 self.accountCreated.textColor = .red
         print(error!.localizedDescription)
             }
@@ -56,4 +63,14 @@ class SignUp: UIViewController {
         
     }
     
+    
+    // Closes keyboard after editing
+    func textFieldShouldReturn() {
+        self.view.endEditing(true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
