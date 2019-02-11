@@ -4,7 +4,7 @@ This iOS app allows people to login, create an account, or simply logout through
 ## What I Learned 
 * How to integrate Firbase via CocoaPods into xcode
 * Configuring authentication to send data back and forth from Firebase
-* Implementing loading and user interactions throughout the app
+* Implementing activity indicators and user interactions throughout the app
 
 ## Project Demo
 Login                      |  Sign Up                  |  Logged In
